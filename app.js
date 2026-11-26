@@ -10,9 +10,9 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-app.get('/', (req, resp) => {
-  return resp.json({ message: "HEALTHY", code: 200})
-})
+  app.get('/', (req, resp) => {
+    return resp.json({ message: "HEALTHY", code: 200})
+  })
 
 app.use('/juegos', juegosRouter);
 app.use('/usuarios', usuariosRouter);

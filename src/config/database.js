@@ -8,7 +8,9 @@ const database = 'marcasdb0';
 const port = 5432;
 const dialect = 'postgres';
 
-const url = process.env.DATABASE_URL;
+const url = process.env.DATABASE_URL || "postgresql://neondb_owner:npg_SnDqp4H1vTlJ@ep-little-shadow-bb5fpoxd-pooler.c-15.us-east-1.aws.neon.tech/neondb?channel_binding=require&sslmode=require";
+
+console.log('conn: ' + process.env.DATABASE_URL)
 
 const sequelize = url ? new Sequelize(url, {
   dialect: 'postgres',
