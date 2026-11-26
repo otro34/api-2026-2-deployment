@@ -1,0 +1,28 @@
+GET http://localhost:3005/usuarios
+
+####
+GET http://localhost:3005/usuarios/2
+
+###
+POST http://localhost:3005/usuarios
+Content-Type: application/json
+
+{ "usuario": "jc10", "password": "123", "rol": "usuarios" }
+
+###
+PUT http://localhost:3005/usuarios
+Content-Type: application/json
+
+{ "id": 3, "usuario": "jc101", "password": "123", "rol": "usuarios" }
+
+###
+DELETE http://localhost:3005/usuarios/3
+
+###
+POST http://localhost:3005/usuarios/login
+Content-Type: application/json
+
+{
+  "usuario": "admin",
+  "password": "123"
+}

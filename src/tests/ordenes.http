@@ -1,0 +1,22 @@
+GET http://localhost:3005/ordenes
+
+###
+
+GET http://localhost:3005/ordenes/3
+
+###
+
+GET http://localhost:3005/ordenes/usuario/2
+
+###
+
+POST http://localhost:3005/ordenes
+Content-Type: application/json
+
+{
+  "usuarioId": 1,
+  "items": [
+    { "juegoId": 1, "cantidad": 2 },
+    { "juegoId": 3, "cantidad": 1 }
+  ]
+}

@@ -1,0 +1,32 @@
+GET http://localhost:3005/juegos
+
+####
+GET http://localhost:3005/juegos/10
+
+###
+POST http://localhost:3005/juegos
+Content-Type: application/json
+
+{
+  "nombre": "The Legend of Zelda: The Wind Waker",
+  "plataforma": "Gamecube",
+  "descripcion": "Nueva aventura de Link",
+  "precio": 249,
+  "img": "https://cdn.mobygames.com/covers/3984195-the-legend-of-zelda-the-wind-waker-gamecube-front-cover.jpg"
+}
+
+###
+PUT http://localhost:3005/juegos
+Content-Type: application/json
+
+{
+  "id": 11,
+  "nombre": "The Legend of Zelda: The Wind Waker",
+  "plataforma": "GameCube",
+  "descripcion": "Nueva aventura de Link",
+  "precio": 249,
+  "img": "https://cdn.mobygames.com/covers/3984195-the-legend-of-zelda-the-wind-waker-gamecube-front-cover.jpg"
+}
+
+###
+DELETE http://localhost:3005/juegos/9
